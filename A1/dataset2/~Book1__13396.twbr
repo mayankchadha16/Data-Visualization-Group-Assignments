@@ -1,0 +1,2402 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0805.0415                               -->
+<workbook original-version='18.1' source-build='2023.2.1 (20232.23.0805.0415)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.DataOrientationSidePane.true...DataOrientationSidePane />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Output' inline='true' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Output' name='textscan.109ejpv1id6cfx1arx22d0vudfyk'>
+            <connection class='textscan' directory='D:/Semester 7/DV/Ass1/Data-Visualization-Group-Assignments/A1/new data' filename='Output.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='electric_range' name='textscan.1a7wl5h1miw1lp15jw0fj1p72kgn'>
+            <connection class='textscan' directory='D:/Semester 7/DV/Ass1/Data-Visualization-Group-Assignments/A1/new data' filename='electric_range.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.109ejpv1id6cfx1arx22d0vudfyk' name='Output.csv' table='[Output#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Clean Alternative Fuel Vehicle Type' ordinal='0' />
+            <column datatype='integer' name='DOL Vehicle ID' ordinal='1' />
+            <column datatype='integer' name='Model Year' ordinal='2' />
+            <column datatype='string' name='Make' ordinal='3' />
+            <column datatype='string' name='Model' ordinal='4' />
+            <column datatype='string' name='Vehicle Primary Use' ordinal='5' />
+            <column datatype='integer' name='Electric Range' ordinal='6' />
+            <column datatype='string' name='New or Used Vehicle' ordinal='7' />
+            <column datatype='integer' name='Sale Price' ordinal='8' />
+            <column datatype='date' date-parse-format='MMMM dd yyyy' name='Sale Date' ordinal='9' />
+            <column datatype='integer' name='Base MSRP' ordinal='10' />
+            <column datatype='string' name='Transaction Type' ordinal='11' />
+            <column datatype='string' name='DOL Transaction Date' ordinal='12' />
+            <column datatype='date' date-parse-format='yyyy' name='Transaction Year' ordinal='13' />
+            <column datatype='string' name='County' ordinal='14' />
+            <column datatype='string' name='City' ordinal='15' />
+            <column datatype='string' name='State of Residence' ordinal='16' />
+            <column datatype='integer' name='Postal Code' ordinal='17' />
+            <column datatype='string' name='Hybrid Vehicle Electrification Fee Paid' ordinal='18' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.109ejpv1id6cfx1arx22d0vudfyk' name='Output.csv' table='[Output#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Clean Alternative Fuel Vehicle Type' ordinal='0' />
+              <column datatype='integer' name='DOL Vehicle ID' ordinal='1' />
+              <column datatype='integer' name='Model Year' ordinal='2' />
+              <column datatype='string' name='Make' ordinal='3' />
+              <column datatype='string' name='Model' ordinal='4' />
+              <column datatype='string' name='Vehicle Primary Use' ordinal='5' />
+              <column datatype='integer' name='Electric Range' ordinal='6' />
+              <column datatype='string' name='New or Used Vehicle' ordinal='7' />
+              <column datatype='integer' name='Sale Price' ordinal='8' />
+              <column datatype='date' date-parse-format='MMMM dd yyyy' name='Sale Date' ordinal='9' />
+              <column datatype='integer' name='Base MSRP' ordinal='10' />
+              <column datatype='string' name='Transaction Type' ordinal='11' />
+              <column datatype='string' name='DOL Transaction Date' ordinal='12' />
+              <column datatype='date' date-parse-format='yyyy' name='Transaction Year' ordinal='13' />
+              <column datatype='string' name='County' ordinal='14' />
+              <column datatype='string' name='City' ordinal='15' />
+              <column datatype='string' name='State of Residence' ordinal='16' />
+              <column datatype='integer' name='Postal Code' ordinal='17' />
+              <column datatype='string' name='Hybrid Vehicle Electrification Fee Paid' ordinal='18' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1a7wl5h1miw1lp15jw0fj1p72kgn' name='electric_range.csv' table='[electric_range#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Make' ordinal='0' />
+              <column datatype='integer' name='Electric Range' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Base MSRP]' value='[Output.csv].[Base MSRP]' />
+          <map key='[City]' value='[Output.csv].[City]' />
+          <map key='[Clean Alternative Fuel Vehicle Type]' value='[Output.csv].[Clean Alternative Fuel Vehicle Type]' />
+          <map key='[County]' value='[Output.csv].[County]' />
+          <map key='[DOL Transaction Date]' value='[Output.csv].[DOL Transaction Date]' />
+          <map key='[DOL Vehicle ID]' value='[Output.csv].[DOL Vehicle ID]' />
+          <map key='[Electric Range (electric_range.csv)]' value='[electric_range.csv].[Electric Range]' />
+          <map key='[Electric Range]' value='[Output.csv].[Electric Range]' />
+          <map key='[Hybrid Vehicle Electrification Fee Paid]' value='[Output.csv].[Hybrid Vehicle Electrification Fee Paid]' />
+          <map key='[Make (electric_range.csv)]' value='[electric_range.csv].[Make]' />
+          <map key='[Make]' value='[Output.csv].[Make]' />
+          <map key='[Model Year]' value='[Output.csv].[Model Year]' />
+          <map key='[Model]' value='[Output.csv].[Model]' />
+          <map key='[New or Used Vehicle]' value='[Output.csv].[New or Used Vehicle]' />
+          <map key='[Postal Code]' value='[Output.csv].[Postal Code]' />
+          <map key='[Sale Date]' value='[Output.csv].[Sale Date]' />
+          <map key='[Sale Price]' value='[Output.csv].[Sale Price]' />
+          <map key='[State of Residence]' value='[Output.csv].[State of Residence]' />
+          <map key='[Transaction Type]' value='[Output.csv].[Transaction Type]' />
+          <map key='[Transaction Year]' value='[Output.csv].[Transaction Year]' />
+          <map key='[Vehicle Primary Use]' value='[Output.csv].[Vehicle Primary Use]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[electric_range.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Clean Alternative Fuel Vehicle Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Clean Alternative Fuel Vehicle Type]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Clean Alternative Fuel Vehicle Type</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DOL Vehicle ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DOL Vehicle ID]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>DOL Vehicle ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Model Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Model Year]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Model Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Make</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Make]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Make</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Model</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Model]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Model</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vehicle Primary Use</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Vehicle Primary Use]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Vehicle Primary Use</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Electric Range</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Electric Range]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Electric Range</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>New or Used Vehicle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[New or Used Vehicle]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>New or Used Vehicle</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sale Price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sale Price]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Sale Price</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sale Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Sale Date]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Sale Date</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Base MSRP</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Base MSRP]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Base MSRP</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Transaction Type]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Transaction Type</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DOL Transaction Date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DOL Transaction Date]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>DOL Transaction Date</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Transaction Year]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Transaction Year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State of Residence</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State of Residence]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>State of Residence</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Postal Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Postal Code]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Postal Code</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hybrid Vehicle Electrification Fee Paid</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Hybrid Vehicle Electrification Fee Paid]</local-name>
+            <parent-name>[Output.csv]</parent-name>
+            <remote-alias>Hybrid Vehicle Electrification Fee Paid</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Make</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Make (electric_range.csv)]</local-name>
+            <parent-name>[electric_range.csv]</parent-name>
+            <remote-alias>Make</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[electric_range.csv_1742CA4B1D4C4427BA51C49175143C5C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Electric Range</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Electric Range (electric_range.csv)]</local-name>
+            <parent-name>[electric_range.csv]</parent-name>
+            <remote-alias>Electric Range</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[electric_range.csv_1742CA4B1D4C4427BA51C49175143C5C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Clean Alternative Fuel Vehicle Type]' role='dimension' type='nominal' />
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+      <column caption='Electric Range (electric range.csv)' datatype='integer' name='[Electric Range (electric_range.csv)]' role='measure' type='quantitative' />
+      <column caption='Make (electric range.csv)' datatype='string' name='[Make (electric_range.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Make]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Model Year]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column datatype='string' name='[State of Residence]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Transaction Year (copy)' datatype='real' datatype-customized='true' name='[Transaction Year (copy)_215046884030738433]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT([Transaction Year])' />
+      </column>
+      <column datatype='date' name='[Transaction Year]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[Vehicle Primary Use]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Output.csv' datatype='table' name='[__tableau_internal_object_id__].[Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='electric_range.csv' datatype='table' name='[__tableau_internal_object_id__].[electric_range.csv_1742CA4B1D4C4427BA51C49175143C5C]' role='measure' type='quantitative' />
+      <column-instance column='[Electric Range (electric_range.csv)]' derivation='Avg' name='[avg:Electric Range (electric_range.csv):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[cum:ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[Electric Range (electric_range.csv)]' derivation='Max' name='[max:Electric Range (electric_range.csv):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Electric Range (electric_range.csv)]' derivation='Min' name='[min:Electric Range (electric_range.csv):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Clean Alternative Fuel Vehicle Type]' derivation='None' name='[none:Clean Alternative Fuel Vehicle Type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Make]' derivation='None' name='[none:Make:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Vehicle Primary Use]' derivation='None' name='[none:Vehicle Primary Use:nk]' pivot='key' type='nominal' />
+      <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[pcdf:ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Electric Range (electric_range.csv)]' derivation='Sum' name='[sum:Electric Range (electric_range.csv):qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Make:nk]' palette='tableau20_10_0' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;CHRYSLER&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;TESLA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;AUDI&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;LINCOLN&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;KIA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;MINI&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;FORD&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;GENESIS&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;FIAT&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;RIVIAN&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;BENTLEY&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;MITSUBISHI&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;NISSAN&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;VOLKSWAGEN&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;LAND ROVER&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ALFA ROMEO&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CHEVROLET&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;LUCID&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;JEEP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;BUBBLE BUDDY&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;POLESTAR&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;TH!NK&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;VOLVO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;HONDA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;WHEEGO ELECTRIC CARS&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;LEXUS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SMART&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CADILLAC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;PLYMOUTH&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;PORSCHE&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;BMW&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;HYUNDAI&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MAZDA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;FISKER&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SUBARU&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;TOYOTA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;AZURE DYNAMICS&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;DODGE&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;JAGUAR&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MERCEDES-BENZ&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Vehicle Primary Use:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Neighborhood Electric Vehicle&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cab&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Farm Use&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Truck&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Passenger&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;For Hire&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Commercial&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Medium-Speed Electric Truck&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Private School&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Medium-Speed Electric Vehicle&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Exempt (State/County/Local/Tribal)&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Taxi Cab&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Farm Exempt&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Clean Alternative Fuel Vehicle Type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Battery Electric Vehicle (BEV)&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Hydrogen Powered Vehicle&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Plug-in Hybrid Electric Vehicle (PHEV)&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ha3pr00c3t1s61g7fhog0q8udau].[cum:ctd:DOL Vehicle ID:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ha3pr00c3t1s61g7fhog0q8udau].[pcdf:ctd:DOL Vehicle ID:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ha3pr00c3t1s61g7fhog0q8udau].[avg:Electric Range (electric_range.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range (electric_range.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ha3pr00c3t1s61g7fhog0q8udau].[min:Electric Range (electric_range.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ha3pr00c3t1s61g7fhog0q8udau].[sum:Electric Range (electric_range.csv):qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+        <semantic-value key='[County].[Name]' value='%null%' />
+        <semantic-value key='[State].[Name]' value='&quot;Washington&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Clean Alternative Fuel Vehicle Type' />
+        <field-sort-custom-order field='DOL Vehicle ID' />
+        <field-sort-custom-order field='Model Year' />
+        <field-sort-custom-order field='Make' />
+        <field-sort-custom-order field='Model' />
+        <field-sort-custom-order field='Vehicle Primary Use' />
+        <field-sort-custom-order field='Electric Range' />
+        <field-sort-custom-order field='New or Used Vehicle' />
+        <field-sort-custom-order field='Sale Price' />
+        <field-sort-custom-order field='Calculation_641199998782365696' />
+        <field-sort-custom-order field='Sale Date' />
+        <field-sort-custom-order field='Base MSRP' />
+        <field-sort-custom-order field='Transaction Type' />
+        <field-sort-custom-order field='DOL Transaction Date' />
+        <field-sort-custom-order field='Transaction Year' />
+        <field-sort-custom-order field='County' />
+        <field-sort-custom-order field='City' />
+        <field-sort-custom-order field='State of Residence' />
+        <field-sort-custom-order field='Postal Code' />
+        <field-sort-custom-order field='Hybrid Vehicle Electrification Fee Paid' />
+        <field-sort-custom-order field='Transaction Year (copy)_215046884030738433' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Output.csv' id='Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1'>
+            <properties context=''>
+              <relation connection='textscan.109ejpv1id6cfx1arx22d0vudfyk' name='Output.csv' table='[Output#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Clean Alternative Fuel Vehicle Type' ordinal='0' />
+                  <column datatype='integer' name='DOL Vehicle ID' ordinal='1' />
+                  <column datatype='integer' name='Model Year' ordinal='2' />
+                  <column datatype='string' name='Make' ordinal='3' />
+                  <column datatype='string' name='Model' ordinal='4' />
+                  <column datatype='string' name='Vehicle Primary Use' ordinal='5' />
+                  <column datatype='integer' name='Electric Range' ordinal='6' />
+                  <column datatype='string' name='New or Used Vehicle' ordinal='7' />
+                  <column datatype='integer' name='Sale Price' ordinal='8' />
+                  <column datatype='date' date-parse-format='MMMM dd yyyy' name='Sale Date' ordinal='9' />
+                  <column datatype='integer' name='Base MSRP' ordinal='10' />
+                  <column datatype='string' name='Transaction Type' ordinal='11' />
+                  <column datatype='string' name='DOL Transaction Date' ordinal='12' />
+                  <column datatype='date' date-parse-format='yyyy' name='Transaction Year' ordinal='13' />
+                  <column datatype='string' name='County' ordinal='14' />
+                  <column datatype='string' name='City' ordinal='15' />
+                  <column datatype='string' name='State of Residence' ordinal='16' />
+                  <column datatype='integer' name='Postal Code' ordinal='17' />
+                  <column datatype='string' name='Hybrid Vehicle Electrification Fee Paid' ordinal='18' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='electric_range.csv' id='electric_range.csv_1742CA4B1D4C4427BA51C49175143C5C'>
+            <properties context=''>
+              <relation connection='textscan.1a7wl5h1miw1lp15jw0fj1p72kgn' name='electric_range.csv' table='[electric_range#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Make' ordinal='0' />
+                  <column datatype='integer' name='Electric Range' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Make]' />
+              <expression op='[Make (electric_range.csv)]' />
+            </expression>
+            <first-end-point object-id='Output.csv_AC0C95A30E7143C18D50E469CB4DC2B1' />
+            <second-end-point object-id='electric_range.csv_1742CA4B1D4C4427BA51C49175143C5C' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Count of Type'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column datatype='string' name='[Clean Alternative Fuel Vehicle Type]' role='dimension' type='nominal' />
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column datatype='string' name='[New or Used Vehicle]' role='dimension' type='nominal' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Clean Alternative Fuel Vehicle Type]' derivation='None' name='[none:Clean Alternative Fuel Vehicle Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[New or Used Vehicle]' derivation='None' name='[none:New or Used Vehicle:nk]' pivot='key' type='nominal' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[pcto:ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Clean Alternative Fuel Vehicle Type:nk]' />
+              <groupfilter function='member' level='[none:Clean Alternative Fuel Vehicle Type:nk]' member='&quot;Hydrogen Powered Vehicle&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]'>
+            <groupfilter function='member' level='[none:New or Used Vehicle:nk]' member='&quot;New&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='688' />
+            <format attr='cell-h' value='688' />
+            <format attr='cell' value='86' />
+            <format attr='cell-q' value='430' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <wedge-size column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' />
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[pcto:ctd:DOL Vehicle ID:qk]' />
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{25B226D7-E976-4BEE-AADF-79FDA6CB40FF}' />
+    </worksheet>
+    <worksheet name='County Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Longitude (generated)]' field-type='quantitative' max='-12882596.249232253' min='-13940386.062326178' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Latitude (generated)]' field-type='quantitative' max='6300446.5730350763' min='5696112.3696337305' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='wrap' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:County:nk]' value='on' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:County:nk]' />
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+              <geometry column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Latitude (generated)]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{70E32183-10D2-45D1-A441-2E0E3FA62516}' />
+    </worksheet>
+    <worksheet name='County Map (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Longitude (generated)]' field-type='quantitative' max='-12918675.872756518' min='-13979745.716735505' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Latitude (generated)]' field-type='quantitative' max='6297166.604495585' min='5692832.4010942392' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='wrap' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:County:nk]' value='on' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:County:nk]' />
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+              <geometry column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Latitude (generated)]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{52D4A352-12A5-40A1-B812-8170E9510DCF}' />
+    </worksheet>
+    <worksheet name='Maker Time Series'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Make]' role='dimension' type='nominal' />
+            <column datatype='string' name='[New or Used Vehicle]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Year]' role='dimension' type='quantitative' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Make]' derivation='None' name='[none:Make:nk]' pivot='key' type='nominal' />
+            <column-instance column='[New or Used Vehicle]' derivation='None' name='[none:New or Used Vehicle:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Transaction Year]' derivation='Year-Trunc' name='[tyr:Transaction Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([Make])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Make:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]'>
+            <groupfilter function='member' level='[none:New or Used Vehicle:nk]' member='&quot;New&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tyr:Transaction Year:qk]' included-values='in-range'>
+            <min>#2010-01-01 00:00:00#</min>
+            <max>#2022-12-31 00:00:00#</max>
+          </filter>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tyr:Transaction Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tyr:Transaction Year:qk]</cols>
+      </table>
+      <simple-id uuid='{34C42152-9097-4DA2-AEA2-297CC8E0B103}' />
+    </worksheet>
+    <worksheet name='Sheet 14'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column datatype='string' name='[New or Used Vehicle]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Year]' role='dimension' type='quantitative' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New or Used Vehicle]' derivation='None' name='[none:New or Used Vehicle:nk]' pivot='key' type='nominal' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[pcdf:ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Transaction Year]' derivation='Year-Trunc' name='[tyr:Transaction Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]'>
+            <groupfilter function='member' level='[none:New or Used Vehicle:nk]' member='&quot;New&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[pcdf:ctd:DOL Vehicle ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tyr:Transaction Year:qk]</cols>
+      </table>
+      <simple-id uuid='{EA12DB38-2B94-4B00-AD7E-61A3608C291D}' />
+    </worksheet>
+    <worksheet name='Sheet 14 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column datatype='string' name='[New or Used Vehicle]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Sale Date]' role='dimension' type='ordinal' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New or Used Vehicle]' derivation='None' name='[none:New or Used Vehicle:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sale Date]' derivation='Quarter-Trunc' name='[tqr:Sale Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sale Date]' derivation='Year' name='[yr:Sale Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]'>
+            <groupfilter function='member' level='[none:New or Used Vehicle:nk]' member='&quot;New&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[yr:Sale Date:ok]'>
+            <groupfilter from='2010' function='range' level='[yr:Sale Date:ok]' to='2023' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[yr:Sale Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='annotation'>
+            <format attr='line-end-size' id='annotation_1' value='small' />
+            <format attr='stroke-size' id='annotation_1' value='2' />
+            <format attr='stroke-color' id='annotation_1' value='#666666' />
+            <format attr='line-visibility' id='annotation_1' value='on' />
+            <format attr='line-pattern-only' id='annotation_1' value='dotted' />
+            <format attr='border-style' id='annotation_1' value='solid' />
+            <format attr='line-end' id='annotation_1' value='dot' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tqr:Sale Date:qk]</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Start of COVID-19 pandemic</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tqr:Sale Date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]</field>
+                      <field>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tqr:Sale Date:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>2212</value>
+                    <value>#2020-01-01 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-5' y='-218' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{64105F91-1482-4C41-B037-676B219AF506}' />
+    </worksheet>
+    <worksheet name='Sheet 16'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7353BC1A-E2B8-4903-9C92-5B892C38231C}' />
+    </worksheet>
+    <worksheet name='TODO Electric Range'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column datatype='integer' name='[Electric Range]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Make]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Model]' role='dimension' type='nominal' />
+            <column-instance column='[Electric Range]' derivation='Max' name='[max:Electric Range:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Electric Range]' derivation='None' name='[none:Electric Range:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Make]' derivation='None' name='[none:Make:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Model]' derivation='None' name='[none:Model:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Electric Range:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>337</max>
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([Electric Range])' function='order' user:ui-marker='order'>
+                <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='level-members' level='[none:Make:nk]' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;GENESIS&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;LUCID&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;RIVIAN&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='%null%' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;TESLA&quot;</bucket>
+              <bucket>&quot;AUDI&quot;</bucket>
+              <bucket>&quot;HYUNDAI&quot;</bucket>
+              <bucket>&quot;CHEVROLET&quot;</bucket>
+              <bucket>&quot;KIA&quot;</bucket>
+              <bucket>&quot;JAGUAR&quot;</bucket>
+              <bucket>&quot;POLESTAR&quot;</bucket>
+              <bucket>&quot;NISSAN&quot;</bucket>
+              <bucket>&quot;PORSCHE&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Electric Range:qk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Model:nk]' value='36' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range:qk]</rows>
+        <cols>([federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk] / [federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Model:nk])</cols>
+      </table>
+      <simple-id uuid='{2748C330-2413-446F-9286-34843B9763B3}' />
+    </worksheet>
+    <worksheet name='TODO Electric Range (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column datatype='integer' name='[Electric Range]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Make]' role='dimension' type='nominal' />
+            <column-instance column='[Electric Range]' derivation='Max' name='[max:Electric Range:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Electric Range]' derivation='None' name='[none:Electric Range:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Make]' derivation='None' name='[none:Make:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Electric Range:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>337</max>
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([Electric Range])' function='order' user:ui-marker='order'>
+                <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='level-members' level='[none:Make:nk]' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;GENESIS&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;LUCID&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;RIVIAN&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='%null%' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Electric Range:qk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' value='76' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range:qk]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]</cols>
+      </table>
+      <simple-id uuid='{E831B012-7F20-4E52-8BD4-C6F30E089BCE}' />
+    </worksheet>
+    <worksheet name='Top Makers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Make]' role='dimension' type='nominal' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Make]' derivation='None' name='[none:Make:nk]' pivot='key' type='nominal' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[pcto:ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' />
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[pcto:ctd:DOL Vehicle ID:qk]' />
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[pcto:ctd:DOL Vehicle ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B38C22D2-B840-40FD-B446-9D265AEB7CBC}' />
+    </worksheet>
+    <worksheet name='Top Makers (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column caption='Electric Range (electric range.csv)' datatype='integer' name='[Electric Range (electric_range.csv)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Make]' role='dimension' type='nominal' />
+            <column datatype='string' name='[New or Used Vehicle]' role='dimension' type='nominal' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Electric Range (electric_range.csv)]' derivation='Max' name='[max:Electric Range (electric_range.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Make]' derivation='None' name='[none:Make:nk]' pivot='key' type='nominal' />
+            <column-instance column='[New or Used Vehicle]' derivation='None' name='[none:New or Used Vehicle:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Electric Range (electric_range.csv)]' derivation='Sum' name='[sum:Electric Range (electric_range.csv):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]'>
+            <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNTD([DOL Vehicle ID])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Make:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]'>
+            <groupfilter function='member' level='[none:New or Used Vehicle:nk]' member='&quot;New&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[sum:Electric Range (electric_range.csv):qk]' included-values='non-null' />
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[sum:Electric Range (electric_range.csv):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range (electric_range.csv):qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range (electric_range.csv):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk] + [federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range (electric_range.csv):qk])</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]</cols>
+      </table>
+      <simple-id uuid='{A052AF82-5522-4D2A-95BC-BD22ED99B11F}' />
+    </worksheet>
+    <worksheet name='Type vs MSRP'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column datatype='string' name='[Clean Alternative Fuel Vehicle Type]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Model Year]' role='dimension' type='quantitative' />
+            <column datatype='string' name='[New or Used Vehicle]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Sale Price]' role='measure' type='quantitative' />
+            <column-instance column='[Sale Price]' derivation='Median' name='[med:Sale Price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Clean Alternative Fuel Vehicle Type]' derivation='None' name='[none:Clean Alternative Fuel Vehicle Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Model Year]' derivation='None' name='[none:Model Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[New or Used Vehicle]' derivation='None' name='[none:New or Used Vehicle:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sale Price]' derivation='None' name='[none:Sale Price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Clean Alternative Fuel Vehicle Type:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Clean Alternative Fuel Vehicle Type:nk]' member='&quot;Hydrogen Powered Vehicle&quot;' />
+                <groupfilter function='member' level='[none:Clean Alternative Fuel Vehicle Type:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Model Year:qk]' included-values='in-range'>
+            <min>2014</min>
+            <max>2024</max>
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]'>
+            <groupfilter function='member' level='[none:New or Used Vehicle:nk]' member='&quot;New&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Sale Price:qk]' included-values='in-range'>
+            <min>10</min>
+            <max>50000</max>
+          </filter>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Sale Price:qk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Model Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[med:Sale Price:qk]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Model Year:qk]</cols>
+      </table>
+      <simple-id uuid='{BCB3BA42-09B2-416E-AA8E-C38A1C71ADDE}' />
+    </worksheet>
+    <worksheet name='Type vs Range'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column datatype='string' name='[Clean Alternative Fuel Vehicle Type]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Electric Range]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Model Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Electric Range]' derivation='Max' name='[max:Electric Range:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Clean Alternative Fuel Vehicle Type]' derivation='None' name='[none:Clean Alternative Fuel Vehicle Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Model Year]' derivation='None' name='[none:Model Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Clean Alternative Fuel Vehicle Type:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Clean Alternative Fuel Vehicle Type:nk]' member='&quot;Hydrogen Powered Vehicle&quot;' />
+                <groupfilter function='member' level='[none:Clean Alternative Fuel Vehicle Type:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Model Year:qk]' included-values='in-range'>
+            <min>2010</min>
+            <max>2021</max>
+          </filter>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Model Year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[max:Electric Range:qk]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Model Year:qk]</cols>
+      </table>
+      <simple-id uuid='{AF9F0061-9242-463D-A09E-078A58A84E0D}' />
+    </worksheet>
+    <worksheet name='Type vs Year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column datatype='string' name='[Clean Alternative Fuel Vehicle Type]' role='dimension' type='nominal' />
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column datatype='string' name='[New or Used Vehicle]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Transaction Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Transaction Year]' derivation='Attribute' name='[attr:Transaction Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Clean Alternative Fuel Vehicle Type]' derivation='None' name='[none:Clean Alternative Fuel Vehicle Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[New or Used Vehicle]' derivation='None' name='[none:New or Used Vehicle:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Transaction Year]' derivation='Year-Trunc' name='[tyr:Transaction Year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[attr:Transaction Year:qk]' included-values='in-range'>
+            <min>#2010-01-01#</min>
+            <max>#2022-12-31#</max>
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Clean Alternative Fuel Vehicle Type:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Clean Alternative Fuel Vehicle Type:nk]' member='&quot;Hydrogen Powered Vehicle&quot;' />
+                <groupfilter function='member' level='[none:Clean Alternative Fuel Vehicle Type:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]'>
+            <groupfilter function='member' level='[none:New or Used Vehicle:nk]' member='&quot;New&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[attr:Transaction Year:qk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:New or Used Vehicle:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' scope='rows' value='Number of New Vehicles' />
+            <format attr='title' class='0' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tyr:Transaction Year:qk]' scope='cols' value='Transaction Year' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[tyr:Transaction Year:qk]</cols>
+      </table>
+      <simple-id uuid='{2075A5AA-AFD2-4E00-B0DE-706A9DF6E390}' />
+    </worksheet>
+    <worksheet name='Vehicle use'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Vehicle Primary Use]' role='dimension' type='nominal' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vehicle Primary Use]' derivation='None' name='[none:Vehicle Primary Use:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='130' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Vehicle Primary Use:nk]' value='224' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Vehicle Primary Use:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{A394D0B9-1463-41A8-BAF8-6500B9DFF8E4}' />
+    </worksheet>
+    <worksheet name='msrp'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Output' name='federated.0ha3pr00c3t1s61g7fhog0q8udau' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ha3pr00c3t1s61g7fhog0q8udau'>
+            <column aggregation='CountD' datatype='integer' name='[DOL Vehicle ID]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Make]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Sale Price]' role='measure' type='quantitative' />
+            <column-instance column='[Sale Price]' derivation='Avg' name='[avg:Sale Price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DOL Vehicle ID]' derivation='CountD' name='[ctd:DOL Vehicle ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Make]' derivation='None' name='[none:Make:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sale Price]' derivation='None' name='[none:Sale Price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]'>
+            <groupfilter count='30' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([Sale Price])' function='order' user:ui-marker='order'>
+                <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='level-members' level='[none:Make:nk]' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;DODGE&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;PLYMOUTH&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;TH!NK&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='&quot;WHEEGO ELECTRIC CARS&quot;' />
+                    <groupfilter function='member' level='[none:Make:nk]' member='%null%' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Sale Price:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>100000</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[avg:Sale Price:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]</column>
+            <column>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Sale Price:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' center='4000' field='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' max='79781' min='3' palette='red_green_diverging_10_0' reverse='true' symmetric='false' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+              <text column='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]</rows>
+        <cols>[federated.0ha3pr00c3t1s61g7fhog0q8udau].[avg:Sale Price:qk]</cols>
+      </table>
+      <simple-id uuid='{7DA29E91-0465-43EC-A22F-8F0B74EBAA2C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='BEV vs PHEV'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='9' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='7' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='5' name='Type vs Year' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='11' name='Type vs Range' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='8' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='8625' id='10' name='Type vs Year' pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='12' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='5' is-fixed='true' name='Type vs Year' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8625' id='10' name='Type vs Year' pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='11' is-fixed='true' name='Type vs Range' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{CA7EF58C-1E39-4A40-ABB9-0EB3F622D2F1}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='How Covid impacted EV sales'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='5' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{2FF20B33-3BE9-4F73-A322-B087244E750A}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='How Tesla Dominated The EV Market'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='1' name='Top Makers (2)' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='3' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='1' is-fixed='true' name='Top Makers (2)' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5ECC1908-C19F-417B-A735-6168F638FE3B}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.14583' source-height='32'>
+    <window class='worksheet' name='Top Makers'>
+      <cards>
+        <edge name='left'>
+          <strip size='153'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='24'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='154'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[pcto:ctd:DOL Vehicle ID:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C0AC7360-F70B-4F08-A910-A707E5FD98D6}' />
+    </window>
+    <window class='worksheet' name='Top Makers (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='152'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='23'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='159'>
+            <card pane-specification-id='2' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BBA8E262-B89F-428A-A6A4-CF8D534F3D2C}' />
+    </window>
+    <window class='worksheet' name='County Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='154'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='25'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='156'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{0B48F034-6E3D-4395-8C5B-98051EA5D5B7}' />
+    </window>
+    <window class='worksheet' name='County Map (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='153'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='24'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='155'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{5EB46B32-2131-4599-94D3-017472A3A52F}' />
+    </window>
+    <window class='worksheet' name='TODO Electric Range'>
+      <cards>
+        <edge name='left'>
+          <strip size='155'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='26'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='159'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5460BC7F-AC43-4C0B-A464-E30EF56D8EDB}' />
+    </window>
+    <window class='worksheet' name='TODO Electric Range (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='154'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='25'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='158'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D2427209-367E-44CD-8878-CCE4CEB237B9}' />
+    </window>
+    <window class='worksheet' name='Vehicle use'>
+      <cards>
+        <edge name='left'>
+          <strip size='155'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='26'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='155'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3FD42265-0D33-49E6-B58B-6FC5898E203B}' />
+    </window>
+    <window class='worksheet' name='Maker Time Series'>
+      <cards>
+        <edge name='left'>
+          <strip size='155'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='26'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='155'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Make:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C48F3595-B94A-4859-A4A4-81D8E7519A58}' />
+    </window>
+    <window class='worksheet' name='Sheet 14'>
+      <cards>
+        <edge name='left'>
+          <strip size='159'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D76CD4C7-9169-46D4-AB0F-6061BF51C497}' />
+    </window>
+    <window class='worksheet' name='Sheet 14 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='158'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0AF0BDA9-719D-4B9A-85F3-E5B941A9F484}' />
+    </window>
+    <window class='worksheet' name='Type vs Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='155'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='26'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='156'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DE692762-FD1C-44A0-AC87-9E71AB3AD817}' />
+    </window>
+    <window class='worksheet' name='Count of Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='159'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='159'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{332745B6-A564-44C9-9BDE-5311F0CF3982}' />
+    </window>
+    <window class='worksheet' name='Type vs Range'>
+      <cards>
+        <edge name='left'>
+          <strip size='159'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='159'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{DD40E7A7-7B7E-4E4A-A631-94E215C63D79}' />
+    </window>
+    <window class='worksheet' name='Type vs MSRP'>
+      <cards>
+        <edge name='left'>
+          <strip size='154'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='25'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='158'>
+            <card pane-specification-id='2' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[none:Clean Alternative Fuel Vehicle Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CB2FA28B-97BF-4AB1-B2FA-1F8755F09A14}' />
+    </window>
+    <window class='worksheet' name='msrp'>
+      <cards>
+        <edge name='left'>
+          <strip size='156'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='27'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='156'>
+            <card pane-specification-id='0' param='[federated.0ha3pr00c3t1s61g7fhog0q8udau].[ctd:DOL Vehicle ID:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BEBCF7DA-4A41-403E-82CC-6AD2E2F0EBDE}' />
+    </window>
+    <window class='dashboard' name='How Tesla Dominated The EV Market'>
+      <viewpoints>
+        <viewpoint name='Top Makers (2)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{42221A6A-A510-4DB1-86CB-E6DA522F731C}' />
+    </window>
+    <window class='dashboard' name='BEV vs PHEV'>
+      <viewpoints>
+        <viewpoint name='Type vs Range'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+        <viewpoint name='Type vs Year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{2B62FAFB-85AA-485E-B484-0B6A11F59F9C}' />
+    </window>
+    <window class='dashboard' name='How Covid impacted EV sales'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{E804010F-4DBC-49DF-8317-F554FD3D8E23}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 16'>
+      <cards>
+        <edge name='left'>
+          <strip size='159'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='30'>
+            <card type='columns' />
+          </strip>
+          <strip size='30'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{08EB53DF-8570-4040-9A34-F4291FEAB824}' />
+    </window>
+  </windows>
+  <_.fcp.DataOrientationSidePane.true...data-orientation>
+    <data-orientation-item>
+      <simple-id uuid='{BCB3BA42-09B2-416E-AA8E-C38A1C71ADDE}' />
+      <desc />
+    </data-orientation-item>
+  </_.fcp.DataOrientationSidePane.true...data-orientation>
+</workbook>
