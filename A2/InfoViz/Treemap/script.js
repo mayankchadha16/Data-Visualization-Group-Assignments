@@ -13,16 +13,10 @@ var svg = d3
 d3.csv("make.csv", function (data) {
   var root = d3
     .stratify()
-    .id(function (d) {
-      return d.name;
-    })
-    .parentId(function (d) {
-      return d.parent;
-    })(data);
+    .id(function (d) {return d.name;})
+    .parentId(function (d) {return d.parent;})(data);
 
-  root.sum(function (d) {
-    return +d.value;
-  });
+  root.sum(function (d) {return +d.value;});
 
   d3.treemap().size([width, height]).padding(4)(root); // default d3.treemapSquarify
 //   d3.treemap().size([width, height]).tile(d3.treemapSlice).padding(4)(root);
@@ -36,29 +30,16 @@ d3.csv("make.csv", function (data) {
     .data(leaves)
     .enter()
     .append("rect")
-    .attr("x", function (d) {
-      return d.x0;
-    })
-    .attr("y", function (d) {
-      return d.y0;
-    })
-    .attr("width", function (d) {
-      return d.x1 - d.x0;
-    })
-    .attr("height", function (d) {
-      return d.y1 - d.y0;
-    })
+    .attr("x", function (d) {return d.x0;})
+    .attr("y", function (d) {return d.y0;})
+    .attr("width", function (d) {return d.x1 - d.x0;})
+    .attr("height", function (d) {return d.y1 - d.y0;})
     .style("stroke", "black")
     .style("fill", "#69b3a2");
 
   var fontScale = d3
     .scaleLinear()
-    .domain([
-      0,
-      d3.max(leaves, function (d) {
-        return d.x1 - d.x0;
-      }),
-    ])
+    .domain([0,d3.max(leaves, function (d) {return d.x1 - d.x0;}),])
     .range([8, 30]);
 
   var textLabels = svg
@@ -66,18 +47,10 @@ d3.csv("make.csv", function (data) {
     .data(leaves)
     .enter()
     .append("text")
-    .attr("x", function (d) {
-      return (d.x0 + d.x1) / 2;
-    })
-    .attr("y", function (d) {
-      return (d.y0 + d.y1) / 2;
-    })
-    .text(function (d) {
-      return d.data.name;
-    })
-    .attr("font-size", function (d) {
-      return fontScale(d.x1 - d.x0) + "px";
-    })
+    .attr("x", function (d) {return (d.x0 + d.x1) / 2;})
+    .attr("y", function (d) {return (d.y0 + d.y1) / 2;})
+    .text(function (d) {return d.data.name;})
+    .attr("font-size", function (d) {return fontScale(d.x1 - d.x0) + "px";})
     .attr("fill", "white")
     .style("visibility", "hidden")
     .attr("text-anchor", "middle") // Center align text horizontally
