@@ -40,7 +40,7 @@ d3.csv("make.csv", function (data) {
   var fontScale = d3
     .scaleLinear()
     .domain([0,d3.max(leaves, function (d) {return d.x1 - d.x0;}),])
-    .range([8, 30]);
+    .range([5, 30]);
 
   var textLabels = svg
     .selectAll("text")
@@ -58,14 +58,20 @@ d3.csv("make.csv", function (data) {
 
   // Add hover event listeners
   rects
-    .on("mouseover", function () {
-      d3.select(this).style("opacity", 0.7);
-      var rectIndex = rects.nodes().indexOf(this);
-      d3.select(textLabels.nodes()[rectIndex]).style("visibility", "visible");
-    })
-    .on("mouseout", function () {
-      d3.select(this).style("opacity", 1);
-      var rectIndex = rects.nodes().indexOf(this);
-      d3.select(textLabels.nodes()[rectIndex]).style("visibility", "hidden");
-    });
+  .on("mouseover", function (d) {
+    d3.select(this).style("opacity", 0.7);
+    var rectIndex = rects.nodes().indexOf(this);
+    var textLabel = d3.select(textLabels.nodes()[rectIndex]);
+
+    textLabel.style("visibility", "visible");
+    var percentOfTotal = ((d.data.value / d.parent.value) * 100).toFixed(2); // Calculate percent of total
+    textLabel.text(`${d.data.name}: ${percentOfTotal}% (${d.data.value})`); // Display name, percent, and value
+  })
+  .on("mouseout", function () {
+    d3.select(this).style("opacity", 1);
+    var rectIndex = rects.nodes().indexOf(this);
+    var textLabel = d3.select(textLabels.nodes()[rectIndex]);
+    textLabel.style("visibility", "hidden");
+    textLabel.text(d.data.name); // Reset the label text to just the name
+  });
 });
