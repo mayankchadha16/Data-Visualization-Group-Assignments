@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Nutrient Parallel Coordinates IV</title>
+<title>PCP</title>
 <body>
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="render-queue.js"></script>
 <link rel="stylesheet" href="style.css"></link>
 <script>
-var margin = {top: 66, right: 110, bottom: 20, left: 188},
+var margin = {top: 66, right: 110, bottom: 20, left: 110},
     width = document.body.clientWidth - margin.left - margin.right,
-    height = 340 - margin.top - margin.bottom,
+    height = 800 - margin.top - margin.bottom,
     innerHeight = height - 2;
 
 var devicePixelRatio = window.devicePixelRatio || 1;
-
-var color = d3.scaleOrdinal()
-  .domain(["Battery Electric Vehicle (BEV)", "Plug-in Hybrid Electric Vehicle (PHEV)"])
-  .range(["#DB7F85", "#FF0000"]);
 
 var types = {
   "Number": {
@@ -31,13 +27,6 @@ var types = {
     extent: function (data) { return data.sort(); },
     within: function(d, extent, dim) { return extent[0] <= dim.scale(d) && dim.scale(d) <= extent[1]; },
     defaultScale: d3.scalePoint().range([0, innerHeight])
-  },
-  "Date": {
-    key: "Date",
-    coerce: function(d) { return new Date(d); },
-    extent: d3.extent,
-    within: function(d, extent, dim) { return extent[0] <= dim.scale(d) && dim.scale(d) <= extent[1]; },
-    defaultScale: d3.scaleTime().range([innerHeight, 0])
   }
 };
 
@@ -57,6 +46,11 @@ var dimensions = [
     description: "Base MSRP",
     type: types["Number"]
   },
+  // {
+  //   key: "Electric Range",
+  //   description: "Electric Range",
+  //   type: types["Number"]
+  // }
 ];
 
 
@@ -177,12 +171,7 @@ d3.csv("make.csv", function(error, data) {
   };
 
   function draw(d) {
-  // Check if the data point matches "Battery Electric Vehicle (BEV)" or "Plug-in Hybrid Electric Vehicle (PHEV)"
-  if (d.Type === "Battery Electric Vehicle (BEV)" || d.Type === "Plug-in Hybrid Electric Vehicle (PHEV)") {
-    ctx.strokeStyle = color(d.Type);
-  } else {
-    ctx.strokeStyle = "gray"; // Set a default color for other data points
-  }
+  ctx.strokeStyle = "orange";
 
   ctx.beginPath();
   var coords = project(d);
@@ -278,9 +267,17 @@ d3.csv("make.csv", function(error, data) {
     ctx.globalAlpha = d3.min([0.85/Math.pow(selected.length,0.3),1]);
     render(selected);
 
-    output.text(d3.tsvFormat(selected.slice(0,24)));
+    // output.text(d3.tsvFormat(selected.slice(0,24)));
   }
 });
+
+d3.selectAll(".axis .background")
+    .on("click", function() {
+      svg.selectAll(".axis .brush")
+        .call(function (brush) {
+          brush.move(null); 
+        });
+    });
 
 function d3_functor(v) {
   return typeof v === "function" ? v : function() { return v; };

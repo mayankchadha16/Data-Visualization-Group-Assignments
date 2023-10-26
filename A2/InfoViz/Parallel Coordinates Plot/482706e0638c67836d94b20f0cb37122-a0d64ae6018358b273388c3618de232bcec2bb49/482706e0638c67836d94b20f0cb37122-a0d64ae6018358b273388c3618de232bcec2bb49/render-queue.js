@@ -60,10 +60,6 @@ var renderQueue = (function(func) {
   rq.invalidate = _invalidate;
 
   var timer_frame = window.requestAnimationFrame
-    || window.webkitRequestAnimationFrame
-    || window.mozRequestAnimationFrame
-    || window.oRequestAnimationFrame
-    || window.msRequestAnimationFrame
     || function(callback) { setTimeout(callback, 17); };
 
   return rq;
