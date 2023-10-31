@@ -1,0 +1,3 @@
+Treemap: L1 DONE(All types), L2 treemaps filtered on continent or countires, time or anything is to be done
+PCP: Axes Reordering left baaki sab done
+NL Diagram: Done Fully
