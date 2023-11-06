@@ -1,0 +1,64 @@
+/* Style for the overall container */
+#my_dataviz {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Style for the treemap rectangles */
+  rect {
+    stroke: #fff;
+    stroke-width: 2px;
+    fill: #1f78b4;
+    transition: fill 0.2s;
+  }
+  
+  rect:hover {
+    fill: #3182bd;
+  }
+  
+  /* Style for text labels */
+  text {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-anchor: middle;
+    fill: #333;
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  /* Style for treemap container borders */
+  rect.parent {
+    fill: none;
+    stroke: #000;
+    stroke-width: 2px;
+    stroke-dasharray: 5, 5;
+  }
+  
+  /* Style for treemap labels */
+  text.label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Style for treemap values */
+  text.value {
+    font-size: 12px;
+  }
+  
+  /* Style for the tooltip */
+  .tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .tooltip.hidden {
+    display: none;
+  }
+  
