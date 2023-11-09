@@ -1,53 +1,70 @@
 d3.csv('model.csv', function (err, rows) {
-  function unpack(rows, key) {
-      return rows.map(function (row) {
-          return row[key];
-      });
-  }
+    function unpack(rows, key) {
+        return rows.map(function (row) {
+            return row[key];
+        });
+    }
 
-  function createTreemap(divId, regionRows, region) {
-      var data = [{
-          type: "treemap",
-          ids: unpack(regionRows, 'name'),
-          values: unpack(regionRows, 'value'),
-          labels: unpack(regionRows, 'name'),
-          textinfo: "label+value",
-          parents: unpack(regionRows, 'parent'),
-          marker: {
-              colorscale: 'Blues', 
-              colorbar: {
-                  tickvals: [0, 1, 2, 3, 4], 
-                  ticktext: ['Central', 'Southern', 'Northern', 'Western', 'Eastern'], 
-              }
-          }
-      }];
+    function createTreemap(divId, regionRows, region) {
+        var data = [{
+            type: "treemap",
+            ids: unpack(regionRows, 'name'),
+            values: unpack(regionRows, 'value'),
+            labels: unpack(regionRows, 'name'),
+            textinfo: "label+value",
+            hoverinfo: "all",
+            parents: unpack(regionRows, 'parent'),
+            marker: {
+                colorscale: [
+                    [0, 'rgb(173, 216, 230)'],
+                    [1, 'rgb(0, 0, 128)']
+                ],
+                colorbar: {
+                    tickvals: [0, 1, 2, 3, 4],
+                    ticktext: ['Central', 'Southern', 'Northern', 'Western', 'Eastern'],
+                    title: 'Region'
+                }
+            },
+            tiling: {
+                packing: 'squarify',
+                pad: 8
+            }
+        }];
 
-      Plotly.newPlot(divId, data);
-  }
+        var layout = {
+            title: region + " Region Treemap",
+            xaxis: { title: 'X Axis Label' },
+            yaxis: { title: 'Y Axis Label' },
+            showlegend: true,
+            responsive: true
+        };
 
-  var centralRows = rows.filter(function (row) {
-      return row.parent === 'Central';
-  });
+        Plotly.newPlot(divId, data, layout);
+    }
 
-  var easternRows = rows.filter(function (row) {
-      return row.parent === 'Eastern';
-  });
+    var centralRows = rows.filter(function (row) {
+        return row.parent === 'Central';
+    });
 
-  var northernRows = rows.filter(function (row) {
-      return row.parent === 'Northern';
-  });
+    var easternRows = rows.filter(function (row) {
+        return row.parent === 'Eastern';
+    });
 
-  var southernRows = rows.filter(function (row) {
-      return row.parent === 'Southern';
-  });
+    var northernRows = rows.filter(function (row) {
+        return row.parent === 'Northern';
+    });
 
-  var westernRows = rows.filter(function (row) {
-      return row.parent === 'Western';
-  });
+    var southernRows = rows.filter(function (row) {
+        return row.parent === 'Southern';
+    });
 
-  createTreemap('centralDiv', centralRows, 'Central');
-  createTreemap('easternDiv', easternRows, 'Eastern');
-  createTreemap('northernDiv', northernRows, 'Northern');
-  createTreemap('southernDiv', southernRows, 'Southern');
-  createTreemap('westernDiv', westernRows, 'Western');
+    var westernRows = rows.filter(function (row) {
+        return row.parent === 'Western';
+    });
+
+    createTreemap('centralDiv', centralRows, 'Central');
+    createTreemap('easternDiv', easternRows, 'Eastern');
+    createTreemap('northernDiv', northernRows, 'Northern');
+    createTreemap('southernDiv', southernRows, 'Southern');
+    createTreemap('westernDiv', westernRows, 'Western');
 });
