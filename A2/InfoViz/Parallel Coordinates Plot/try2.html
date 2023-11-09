@@ -11,11 +11,19 @@
 
     <script>
       Plotly.d3.csv("make.csv", function (err, rows) {
+        var types = [...new Set(rows.map((row) => row["Type"]))];
+
         var trace = {
           type: "parcoords",
           line: {
-            color: rows.map((row) => row["Type"]),
-            colorscale: "Jet",
+            color: rows.map((row) => types.indexOf(row["Type"])),
+            colorscale: "Viridis",
+            opacity: 0.7,
+            colorbar: {
+              title: 'Type',
+              tickvals: [0, 1],
+              ticktext: ['BEV', 'PHEV'],
+            },
           },
           dimensions: [
             {
@@ -34,9 +42,27 @@
         };
 
         var layout = {
-          title: "Parallel Coordinates Plot",
-          height: 600,
-          width: 800,
+          title: {
+            text: "Parallel Coordinates Plot",
+            font: {
+              size: 20,
+            },
+            x: 0.5, 
+          },
+          height: 800,
+          width: 1500,
+          legend: {
+            traceorder: "reversed",
+          },
+          xaxis: {
+            tickangle: -45,
+            showgrid: true, 
+          },
+          yaxis: {
+            showgrid: true, 
+          },
+          plot_bgcolor: "#f8f8f8", 
+          paper_bgcolor: "#f8f8f8", 
         };
 
         Plotly.newPlot("parallel-coordinates-plot", [trace], layout);
