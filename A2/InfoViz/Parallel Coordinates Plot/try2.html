@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parallel Coordinates Plot</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      .axis-title,
+      .tick {
+        font-weight: bold;
+      }
+      
+    </style>
   </head>
   <body>
     <div id="parallel-coordinates-plot"></div>
 
     <script>
-      Plotly.d3.csv("make.csv", function (err, rows) {
+      Plotly.d3.csv("out3.csv", function (err, rows) {
         var types = [...new Set(rows.map((row) => row["Type"]))];
 
         var trace = {
           type: "parcoords",
           line: {
             color: rows.map((row) => types.indexOf(row["Type"])),
-            colorscale: "Viridis",
+            colorscale: [[0, 'rgb(255, 0, 0)'], [1, 'rgb(0, 0, 255)']],
             opacity: 0.7,
             colorbar: {
               title: 'Type',
               tickvals: [0, 1],
               ticktext: ['BEV', 'PHEV'],
-            },
+              tickmode: 'array',
+          },
           },
           dimensions: [
             {
@@ -38,21 +46,24 @@
               label: "Base MSRP",
               values: rows.map((row) => row["Base MSRP"]),
             },
+            
+
           ],
         };
 
         var layout = {
           title: {
-            text: "Parallel Coordinates Plot",
+            text: "Electric Vehicle Population Data: PCP",
             font: {
-              size: 20,
+              size: 30,
             },
             x: 0.5, 
           },
           height: 800,
-          width: 1500,
+          width: 1600,
           legend: {
             traceorder: "reversed",
+            
           },
           xaxis: {
             tickangle: -45,
@@ -64,6 +75,7 @@
           plot_bgcolor: "#f8f8f8", 
           paper_bgcolor: "#f8f8f8", 
         };
+        
 
         Plotly.newPlot("parallel-coordinates-plot", [trace], layout);
       });

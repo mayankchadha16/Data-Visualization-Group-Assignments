@@ -1,6 +1,6 @@
 var margin = { top: 10, right: 10, bottom: 10, left: 10 },
-  width = 1800 - margin.left - margin.right,
-  height = 850 - margin.top - margin.bottom;
+  width = 1500 - margin.left - margin.right,
+  height = 560 - margin.top - margin.bottom;
 
 var svg = d3
   .select("#my_dataviz")
@@ -18,9 +18,12 @@ d3.csv("make.csv", function (data) {
 
   root.sum(function (d) { return +d.value; });
 
+  // Uncomment one of these three lines and comment other two to see Squarify, Slice and Dice type of partitioning
+  // ###########################################################################
   d3.treemap().size([width, height]).tile(d3.treemapSquarify).padding(8)(root);
   // d3.treemap().size([width, height]).tile(d3.treemapSlice).padding(8)(root);
-  //   d3.treemap().size([width, height]).tile(d3.treemapDice).padding(8)(root);
+  // d3.treemap().size([width, height]).tile(d3.treemapDice).padding(8)(root);
+  // ###########################################################################
 
   var leaves = root.leaves();
 
