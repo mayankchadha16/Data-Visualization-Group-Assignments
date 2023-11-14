@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Load plotly.js into the DOM -->
-    <script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
-</head>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-<body>
-    <div id='centralDiv'></div>
-    <div id='easternDiv'></div>
-    <div id='northernDiv'></div>
-    <div id='southernDiv'></div>
-    <div id='westernDiv'></div>
+      .treemap-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .treemap {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 360px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Region-wise Treemaps</h1>
+    <div class="treemap-container">
+      <div id="centralDiv" class="treemap"></div>
+      <div id="easternDiv" class="treemap"></div>
+      <div id="northernDiv" class="treemap"></div>
+      <div id="southernDiv" class="treemap"></div>
+      <div id="westernDiv" class="treemap"></div>
+    </div>
     <script src="script2.js"></script>
-</body>
-
+  </body>
 </html>

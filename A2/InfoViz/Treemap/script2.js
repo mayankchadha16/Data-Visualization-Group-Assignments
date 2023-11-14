@@ -16,8 +16,8 @@ d3.csv('model.csv', function (err, rows) {
             parents: unpack(regionRows, 'parent'),
             marker: {
                 colorscale: [
-                    [0, 'rgb(173, 216, 230)'],
-                    [1, 'rgb(0, 0, 128)']
+                    [0, 'rgb(235,241,248)'],
+                    [1, 'rgb(8,48,107)']
                 ],
                 colorbar: {
                     tickvals: [0, 1, 2, 3, 4],
@@ -26,13 +26,21 @@ d3.csv('model.csv', function (err, rows) {
                 }
             },
             tiling: {
-                packing: 'squarify',
+                packing: 'squarify', // can be set to one of ( "squarify" | "binary" | "dice" | "slice" | "slice-dice" | "dice-slice" ) most of them look same though
                 pad: 8
             }
         }];
 
         var layout = {
-            title: region + " Region Treemap",
+            title: {
+                text: "Number of EVs in " + region + " Region",
+                font: {
+                    family: 'Arial, sans-serif',
+                    size: 20,
+                    color: '#333',
+                    weight: 'bolder' 
+                }
+            },
             xaxis: { title: 'X Axis Label' },
             yaxis: { title: 'Y Axis Label' },
             showlegend: true,
