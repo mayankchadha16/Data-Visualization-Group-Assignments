@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 2 Treemap</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #treemap {
+        display: flex;
+        position: relative;
+        left: 10px;
+      }
+      #heading {
+        font-size: 20px;
+        padding: 10px;
+        font-weight: bold;
+      }
+      .cell {
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        position: absolute;
+        overflow: hidden;
+      }
+      .cell:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid #000;
+      }
+      .cell-text {
+        pointer-events: none;
+      }
+      #legend {
+        padding: 100px;
+        position: absolute;
+        top: 10px;
+        left: 1450px;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+      .legend-item:hover {
+        font-weight: bold;
+      }
+      .legend-color {
+        width: 15px;
+        height: 15px;
+        margin-right: 8px;
+      }
+      .cell-text {
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .cell:hover .cell-text {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heading">Level 2 Treemap - Distribution of EVs by Region</div>
+    <div id="treemap"></div>
+    <div id="legend"></div>
+
+    <script>
+      d3.csv("model1.csv").then(function (dataRows) {
+        function extractData(rows, key) {
+          return rows.map(function (row) {
+            return row[key];
+          });
+        }
+
+        const colorPalette = d3.scaleOrdinal(d3.schemeTableau10);
+
+        const svgWidth = 1500;
+        const svgHeight = 700;
+
+        const treemapLayout = d3
+          .treemap()
+          .tile(d3.treemapSquarify)
+          .size([svgWidth, svgHeight]);
+
+        const treemapData = {
+          name: "Root",
+          children: extractData(dataRows, "label").map((label, i) => ({
+            name: label,
+            value: parseFloat(extractData(dataRows, "values")[i]),
+            parent: extractData(dataRows, "parent")[i],
+          })),
+        };
+
+        const hierarchy = d3.hierarchy(treemapData).sum((d) => d.value);
+
+        treemapLayout(hierarchy);
+
+        const uniqueParents = Array.from(
+          new Set(extractData(dataRows, "parent"))
+        );
+        const parentColorMap = {};
+        uniqueParents.forEach((parent, i) => {
+          parentColorMap[parent] = colorPalette(i);
+        });
+
+        const svgContainer = d3
+          .select("#treemap")
+          .append("svg")
+          .attr("width", svgWidth)
+          .attr("height", svgHeight);
+
+        const cells = svgContainer
+          .selectAll(".cell")
+          .data(hierarchy.leaves())
+          .enter()
+          .append("foreignObject")
+          .attr("class", "cell")
+          .attr("x", (d) => d.x0)
+          .attr("y", (d) => d.y0)
+          .attr("width", (d) => d.x1 - d.x0)
+          .attr("height", (d) => d.y1 - d.y0)
+          .style("background-color", (d) => parentColorMap[d.data.parent])
+          .on("mouseover", function (event, d) {
+            d3.select(this).style("border", "1px solid #000");
+            showTooltip(d);
+          })
+          .on("mouseout", function () {
+            d3.select(this).style("border", "1px solid #fff");
+            hideTooltip();
+          });
+
+        cells
+          .append("xhtml:div")
+          .attr("class", "cell-text")
+          .style("width", "100%")
+          .style("height", "100%")
+          .style("font-size", function (d) {
+            // Calculate dynamic font size based on rectangle size
+            const fontSize = Math.max(
+              Math.min(30, (d.x1 - d.x0) / 2, (d.y1 - d.y0) / 2),
+              8
+            );
+            return `${fontSize}px`;
+          })
+          .html(
+            (d) =>
+              `${d.data.name}<br>${d.value} (${(
+                (d.value / hierarchy.value) *
+                100
+              ).toFixed(2)}%)`
+          );
+
+        const legendContainer = d3.select("#legend").append("div");
+
+        const legendItems = legendContainer
+          .selectAll(".legend-item")
+          .data(uniqueParents)
+          .enter()
+          .append("div")
+          .attr("class", "legend-item")
+          .on("click", function (event, d) {
+            filterByParent(d);
+          });
+
+        legendItems
+          .append("div")
+          .attr("class", "legend-color")
+          .style("background-color", (d) => parentColorMap[d]);
+
+        legendItems.append("div").text((d) => d);
+      });
+    </script>
+  </body>
+</html>
