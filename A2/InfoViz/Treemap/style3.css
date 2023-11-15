@@ -1,0 +1,72 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  #treemap {
+    display: flex;
+    position: relative;
+    left: 10px;
+  }
+  
+  #heading {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .cell {
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .cell:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #000;
+  }
+  
+  .cell-text {
+    pointer-events: none;
+  }
+  
+  #legend {
+    padding: 100px;
+    position: absolute;
+    top: 10px;
+    left: 1450px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .legend-item:hover {
+    font-weight: bold;
+  }
+  
+  .legend-color {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+  }
+  
+  .cell-text {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .cell:hover .cell-text {
+    opacity: 1;
+  }
+  
