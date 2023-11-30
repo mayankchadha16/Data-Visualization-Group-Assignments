@@ -12,7 +12,7 @@ d3.csv("model1.csv").then(function (dataRows) {
 
     const treemapLayout = d3
         .treemap()
-        .tile(d3.treemapSquarify)
+        .tile(d3.treemapSquarify) // d3.treemapSlice,  d3.treemapDice and other can be tried
         .size([svgWidth, svgHeight]);
 
     const treemapData = {
@@ -68,7 +68,6 @@ d3.csv("model1.csv").then(function (dataRows) {
         .style("width", "100%")
         .style("height", "100%")
         .style("font-size", function (d) {
-            // Calculate dynamic font size based on rectangle size
             const fontSize = Math.max(
                 Math.min(30, (d.x1 - d.x0) / 2, (d.y1 - d.y0) / 2),
                 8
